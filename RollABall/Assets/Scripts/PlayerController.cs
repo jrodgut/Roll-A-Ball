@@ -7,12 +7,15 @@ public class PlayerController : MonoBehaviour
 
 	public GUIText countText;
 
+	public GUIText winText;
+
 	private int count;
 
 	void Start()
 	{
 		count = 0;
 		refreshCountText ();
+		winText.text = "";
 	}
 
 	// Update before physics calculation
@@ -32,6 +35,9 @@ public class PlayerController : MonoBehaviour
 			other.gameObject.SetActive(false);
 			count++;
 			refreshCountText ();
+			if (count == 12) {
+				winText.text = "You won!";
+			}
 		}
 	}
 

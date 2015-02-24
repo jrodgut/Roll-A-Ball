@@ -75,6 +75,57 @@ NavMeshSettings:
     heightInaccuracy: 10
     tileSizeHint: 0
   m_NavMesh: {fileID: 0}
+--- !u!1 &50863527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 50863529}
+  - 132: {fileID: 50863528}
+  m_Layer: 0
+  m_Name: Win Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!132 &50863528
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 50863527}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: Message
+  m_Anchor: 4
+  m_Alignment: 1
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!4 &50863529
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 50863527}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .5, y: .75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1274236873}
+  m_RootOrder: 0
 --- !u!1 &222404158
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,6 +871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   countText: {fileID: 1344378972}
+  winText: {fileID: 50863528}
 --- !u!1 &673233996
 GameObject:
   m_ObjectHideFlags: 0
@@ -1717,6 +1769,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 50863529}
   - {fileID: 1344378971}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -1776,7 +1829,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1274236873}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!132 &1344378972
 GUIText:
   m_ObjectHideFlags: 0
@@ -1785,7 +1838,7 @@ GUIText:
   m_GameObject: {fileID: 1344378970}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: 
+  m_Text: Counter
   m_Anchor: 0
   m_Alignment: 0
   m_PixelOffset: {x: 10, y: -10}
